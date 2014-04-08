@@ -9,7 +9,7 @@ test -e "$SRC" || { echo "No existe compilacion Quick para Linux 32 bits! (falta
 echo "Exportando compilacion Quick Linux 32 bits para $PVERSION . . . "
 
 mv "$SRC" "$PVERSION"
-tar cf "$PVERSION-linux32.tar" "$PVERSION" --exclude="*.a" --exclude="*.o" --exclude="*.prl" --exclude="mkspecs" --exclude="include"  --exclude="templates" 
+tar cf "$PVERSION-linux32.tar" "$PVERSION" --exclude="*.a" --exclude="*.o" --exclude="*.prl" --exclude="mkspecs" --exclude="include"  --exclude="templates" --exclude="phrasebooks" --exclude="dbf" --exclude="lrelease" --exclude="lupdate" --exclude="moc" --exclude="qm2ts" --exclude="qmake" --exclude="uic"
 bzip2 -9 "$PVERSION-linux32.tar"
 
 mkdir "export/" 2>/dev/null
